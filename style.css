@@ -91,6 +91,9 @@ body{
   margin-bottom:12px;
   letter-spacing:0.2px;
 }
+.hero-copy{
+  width: 100%;
+}
 .hero-sub{
   color:var(--muted);
   margin-bottom:20px;
