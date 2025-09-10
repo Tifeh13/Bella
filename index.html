@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bella — Art Portfolio</title>
+  <title>Bella — Creative Art Studio</title>
 
-  <!-- Favicon (example icon) -->
-  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/diamond.png" type="image/png">
+  <!-- Favicon (Art-related, replace for other pages if needed) -->
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/paint-palette.png" type="image/png">
 
   <link rel="stylesheet" href="style.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
   <!-- Header -->
@@ -21,23 +19,18 @@
         <span class="logo">Bella</span>
       </a>
 
+      <!-- Horizontal nav -->
       <nav class="nav">
-        <a class="nav-link active" href="index.html">Portfolio</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <div class="search-container" id="searchContainer">
-          <button id="searchToggle" class="search-btn" aria-label="Open search">🔍</button>
-          <input id="searchInput" class="search-input" type="text" placeholder="Search: ring / watch / necklace..." />
-        </div>
-
-        <a class="cart-like" href="#portfolio" aria-label="View portfolio">
-          <!-- decorative button to move user down -->
-          <span>View</span>
+        <a class="nav-link active" href="index.html" title="Gallery">
+          <i class="fas fa-images"></i>
         </a>
-      </div>
+        <a class="nav-link" href="about.html" title="About">
+          <i class="fas fa-user"></i>
+        </a>
+        <a class="nav-link" href="contact.html" title="Contact">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -45,17 +38,17 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <h1 class="hero-title">Bold. Warm. Expressive.</h1>
-        <p class="hero-sub">A curated portfolio of paintings and digital artworks by Bella — contemporary pieces that tell a story and capture movement, texture and mood.</p>
+        <h1 class="hero-title">Creative. Bold. Distinctive.</h1>
+        <p class="hero-sub">Discover a curated collection of original paintings and digital artworks by Bella. Each creation is crafted to evoke emotion, capture movement, and convey intricate textures — reflecting a unique artistic vision.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#portfolio">View Portfolio</a>
-          <a class="btn btn-ghost" href="about.html">Meet Bella</a>
+          <a class="btn btn-primary" href="#portfolio">Explore the Gallery</a>
+          <a class="btn btn-ghost" href="about.html">Learn More About Bella</a>
         </div>
       </div>
 
       <div class="hero-media">
         <div class="hero-card">
-          <img src="https://picsum.photos/720/920?random=11" alt="Feature artwork" loading="lazy">
+          <img src="https://picsum.photos/720/920?random=11" alt="Featured artwork" loading="lazy">
         </div>
       </div>
     </div>
@@ -65,7 +58,7 @@
   <main id="portfolio" class="portfolio container">
     <header class="section-head">
       <h2>Featured Works</h2>
-      <p class="muted">Click any artwork to preview. Use the search in the header to filter by category (ring/watch/necklace/earring/bracelet).</p>
+      <p class="muted">Click on any artwork for an enlarged view. Use the navigation above to explore different styles, including abstract, portrait, landscape, digital, and traditional painting.</p>
     </header>
 
     <div id="productGrid" class="grid"></div>
@@ -76,7 +69,7 @@
     <div class="container footer-inner">
       <div>
         <h4>Bella</h4>
-        <p class="muted">Contemporary artworks & commissions.</p>
+        <p class="muted">Specializing in original artworks, custom commissions, and professional collaborations.</p>
       </div>
       <div>
         <h5>Follow</h5>
@@ -86,16 +79,15 @@
               <i class="fab fa-tiktok"></i> TikTok
             </a>
           </li>
-          
         </ul>
       </div>
       <div>
         <h5>Contact</h5>
-        <a class="muted" href="contact.html">Get in touch</a>
+        <a class="muted" href="contact.html">Get in Touch</a>
       </div>
     </div>
     <div class="footer-bottom">
-      © <span id="year"></span> Bella — All rights reserved.
+      © 2020 Bella — All rights reserved.
     </div>
   </footer>
 
@@ -108,6 +100,9 @@
     </div>
   </div>
 
+  <script>
+    document.getElementById('year-home').textContent = new Date().getFullYear();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

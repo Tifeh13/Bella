@@ -3,54 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Bella</title>
-  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/diamond.png" type="image/png">
+  <title>About — Bella Canvas Art</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/paint-palette.png" type="image/png">
+
+  <!-- Styles & Icons -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><span class="logo">Bella</span></a>
+
+      <!-- Icon-based Nav (same as index.html) -->
       <nav class="nav">
-        <a class="nav-link" href="index.html">Portfolio</a>
-        <a class="nav-link active" href="about.html">About</a>
-        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="index.html" title="Gallery">
+          <i class="fas fa-images"></i>
+        </a>
+        <a class="nav-link active" href="about.html" title="About">
+          <i class="fas fa-user"></i>
+        </a>
+        <a class="nav-link" href="contact.html" title="Contact">
+          <i class="fas fa-envelope"></i>
+        </a>
       </nav>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="about container">
-    <h1>About Bella</h1>
+    <header class="section-head">
+      <h1>About Bella</h1>
+      <p class="muted">A professional canvas artist blending music, sports, culture, and emotion into bold, expressive visual works.</p>
+    </header>
 
     <div class="about-inner">
       <div class="bio-image">
-        <img src="https://picsum.photos/600/600?random=20" alt="Bella portrait" loading="lazy" style="width: 50%;">
+        <img src="https://picsum.photos/600/600?random=20" alt="Bella portrait" loading="lazy" style="width:50%;">
       </div>
 
       <div class="bio-text">
-        <p><strong>Bella</strong> is a 24-year-old visual artist whose work connects music, sports, and culture through bold, expressive art. She believes every brushstroke should carry energy and meaning — making her pieces feel alive.</p>
+        <p><strong>Bella</strong> is a 24-year-old contemporary artist with a passion for capturing movement, rhythm, and story through her paintings. Her work explores intersections between music, sports, fashion, and human emotion, creating pieces that resonate with energy and authenticity.</p>
 
-        <p>Bella’s artwork has been connected with **world-class names** across industries:  
-          - In <strong>music</strong>: inspired by collaborations with icons like <em>Beyoncé, Burna Boy, Drake, and Adele</em>.  
-          - In <strong>sports</strong>: painted portraits of athletes influenced by <em>LeBron James, Lionel Messi, Serena Williams, and Cristiano Ronaldo</em>.  
-          - In <strong>fashion & culture</strong>: created visuals resonating with the style of <em>Virgil Abloh, Rihanna, and Pharrell Williams</em>.  
-        </p>
+        <h3>Artistic Vision & Ideas</h3>
+        <p>Bella approaches every commission with a strong conceptual foundation. Her ideas often stem from listening to music, observing athletic performance, or reflecting on cultural moments. This allows her to create artworks that feel alive — with texture, movement, and color harmoniously conveying a narrative. Each piece is designed to evoke emotion, spark curiosity, and leave a lasting impression.</p>
 
-        <h3>Industries & Engagements</h3>
-        <p>Bella has produced artworks for live sports arenas, music album covers, and festival backdrops. Her practice moves between hand-painted textures and digital layering — ensuring versatility across murals, prints, and brand campaigns.</p>
+        <h3>Collaborations & Notable Works</h3>
+        <p>Over the years, Bella has worked with a range of artists, brands, and institutions, producing work for album covers, sports arenas, and international exhibitions. Some highlights include:</p>
+        <ul>
+          <li>Collaborative mural inspired by <em>Beyoncé</em>’s music videos.</li>
+          <li>Portrait series capturing the essence of <em>Lionel Messi</em> and <em>Serena Williams</em> in motion.</li>
+          <li>Fashion-forward illustrations commissioned by creatives inspired by <em>Virgil Abloh</em> and <em>Rihanna</em>.</li>
+          <li>Digital paintings for campaigns with music labels and cultural festivals across Europe and Africa.</li>
+        </ul>
 
-        <h3>Creative Voice</h3>
-        <p>Her art emphasizes raw emotion: rhythm from <strong>music</strong>, motion from <strong>sports</strong>, and expression from <strong>human stories</strong>. This has led to impactful collaborations with teams, record labels, and global creative agencies.</p>
+        <h3>Mediums & Techniques</h3>
+        <p>Bella works across both traditional and digital mediums, blending oil, acrylic, and ink with digital textures and layering techniques. Her versatility allows her to produce murals, prints, album visuals, and bespoke commissions. She emphasizes experimentation — combining brushwork with digital effects to achieve depth, contrast, and emotion in every piece.</p>
 
-        <p><em>To collaborate or commission Bella’s work, head over to the Contact page to connect via iMessage or email.</em></p>
+        <h3>Philosophy & Creative Impact</h3>
+        <p>Her art reflects the pulse of contemporary culture. Through every stroke, Bella channels rhythm from music, motion from sports, and narratives from everyday life. She believes art should connect communities, provoke thought, and inspire creativity — leaving a lasting cultural impact.</p>
+
+        <p><em>To commission a piece or discuss a collaboration, head to the Contact page to connect via iMessage or email.</em></p>
       </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <h4>Bella</h4>
-      <p class="muted">Contemporary artworks & commissions.</p>
+      <div>
+        <h4>Bella</h4>
+        <p class="muted">Contemporary canvas artworks & commissions.</p>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul class="socials">
+          <li><a href="#" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
       © <span id="year-about"></span> Bella — All rights reserved.
@@ -60,5 +94,6 @@
   <script>
     document.getElementById('year-about').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

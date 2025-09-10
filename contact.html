@@ -3,58 +3,108 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Bella</title>
-  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/diamond.png" type="image/png">
+  <title>Contact — Bella Canvas Art</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/paint-palette.png" type="image/png">
+
+  <!-- Styles & Icons -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><span class="logo">Bella</span></a>
+      <a class="brand" href="index.html">
+        <span class="logo">Bella</span>
+      </a>
+
+      <!-- Icon-based Nav (same as index.html) -->
       <nav class="nav">
-        <a class="nav-link" href="index.html">Portfolio</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link active" href="contact.html">Contact</a>
+        <a class="nav-link" href="index.html" title="Gallery">
+          <i class="fas fa-images"></i>
+        </a>
+        <a class="nav-link" href="about.html" title="About">
+          <i class="fas fa-user"></i>
+        </a>
+        <a class="nav-link active" href="contact.html" title="Contact">
+          <i class="fas fa-envelope"></i>
+        </a>
       </nav>
-      <div class="header-actions">
-        <a class="btn btn-ghost" href="mailto:bellacanvasart90@gmail.com">Email</a>
-      </div>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="contact container" id="contact">
-    <h1>Contact</h1>
-    <p>For commissions, prints, or collaborations, you can message Bella directly. The primary contact (iMessage) is linked below — on devices with Messages/iMessage available this should open the Messages app. There is also a Gmail fallback.</p>
+    <header class="section-head">
+      <h1>Get in Touch</h1>
+      <p class="muted">For commissions, prints, collaborations, or general inquiries, contact Bella directly. Choose the method that works best for you.</p>
+    </header>
 
     <div class="contact-links">
-      <!-- Attempt to open iMessage (sms:) — note this works best on mobile / macOS with Messages -->
-      <a id="imessageBtn" class="btn" href="sms:bellacanvasart90@gmail.com?body=Hello%20Bella%2C%20I%27d%20like%20to%20inquire%20about%20a%20commission.">Message (iMessage)</a>
+      <!-- iMessage / SMS -->
+      <a id="imessageBtn" class="btn" href="sms:bellacanvasart90@gmail.com?body=Hello%20Bella%2C%20I%27m%20interested%20in%20your%20artwork.">
+        Message via iMessage
+      </a>
 
-      <!-- Gmail fallback -->
-      <a id="emailBtn" class="btn btn-ghost" href="mailto:bellacanvasart90@gmail.com?subject=Commission%20Inquiry">Email bellacanvasart90@gmail.com</a>
+      <!-- Email -->
+      <a id="emailBtn" class="btn btn-ghost" href="mailto:bellacanvasart90@gmail.com?subject=Commission%20Inquiry">
+        Send an Email
+      </a>
 
-      <p class="muted small">If the "Message" button doesn't open Messages on your device, use the email option instead.</p>
+      <p class="muted small">If the "Message" option doesn't work on your device, please use the email link instead.</p>
 
-      <h4>Social</h4>
-      <a class="muted" href="#" target="_blank" rel="noopener">TikTok</a>
+      <!-- Social Media -->
+      <h4>Connect with Bella</h4>
+      <div class="socials">
+        <a href="#" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="#" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
     </div>
+
+    <!-- Additional Info -->
+    <section class="additional-info">
+      <h4>Studio Location</h4>
+      <p class="muted">Based in [City, Country]. International commissions are welcome.</p>
+
+      <h4>Operating Hours</h4>
+      <p class="muted">Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 10:00 AM – 4:00 PM</p>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
         <h4>Bella</h4>
-        <p class="muted">Contemporary artworks & commissions.</p>
+        <p class="muted">Contemporary canvas artworks & commissions.</p>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul class="socials">
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <i class="fab fa-tiktok"></i> TikTok
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a class="muted" href="contact.html">Get in Touch</a>
       </div>
     </div>
     <div class="footer-bottom">
-      © <span id="year-contact"></span> Bella — All rights reserved.
+      © 2020 Bella — All rights reserved.
     </div>
   </footer>
 
   <script>
     document.getElementById('year-contact').textContent = new Date().getFullYear();
-    // Optional: handle click to show a small toast if sms: isn't supported (left minimal on purpose)
   </script>
+
 </body>
 </html>
