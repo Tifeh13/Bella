@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Bella</title>
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/diamond.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="logo">Bella</span></a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Portfolio</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="mailto:bellacanvasart90@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contact container" id="contact">
+    <h1>Contact</h1>
+    <p>For commissions, prints, or collaborations, you can message Bella directly. The primary contact (iMessage) is linked below — on devices with Messages/iMessage available this should open the Messages app. There is also a Gmail fallback.</p>
+
+    <div class="contact-links">
+      <!-- Attempt to open iMessage (sms:) — note this works best on mobile / macOS with Messages -->
+      <a id="imessageBtn" class="btn" href="sms:bellacanvasart90@gmail.com?body=Hello%20Bella%2C%20I%27d%20like%20to%20inquire%20about%20a%20commission.">Message (iMessage)</a>
+
+      <!-- Gmail fallback -->
+      <a id="emailBtn" class="btn btn-ghost" href="mailto:bellacanvasart90@gmail.com?subject=Commission%20Inquiry">Email bellacanvasart90@gmail.com</a>
+
+      <p class="muted small">If the "Message" button doesn't open Messages on your device, use the email option instead.</p>
+
+      <h4>Social</h4>
+      <a class="muted" href="#" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Bella</h4>
+        <p class="muted">Contemporary artworks & commissions.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year-contact"></span> Bella — All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-contact').textContent = new Date().getFullYear();
+    // Optional: handle click to show a small toast if sms: isn't supported (left minimal on purpose)
+  </script>
+</body>
+</html>
