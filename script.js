@@ -1,46 +1,35 @@
-// Unique artwork titles by category (Canvas-style artworks)
+// Oil painting-themed artworks
 const categories = {
-  rings: [
-    { id: "ring-1", title: "Golden Swirl", category: "ring", img: "https://picsum.photos/600/600?random=1101" },
-    { id: "ring-2", title: "Sunlit Circle", category: "ring", img: "https://picsum.photos/600/600?random=1102" },
-    { id: "ring-3", title: "Azure Loop", category: "ring", img: "https://picsum.photos/600/600?random=1103" },
-    { id: "ring-4", title: "Abstract Ring", category: "ring", img: "https://picsum.photos/600/600?random=1104" },
-    { id: "ring-5", title: "Canvas Echo", category: "ring", img: "https://picsum.photos/600/600?random=1105" },
-    { id: "ring-6", title: "Twilight Loop", category: "ring", img: "https://picsum.photos/600/600?random=1106" }
+  landscapes: [
+    { id: "landscape-1", title: "Sunset Over the Sea", category: "landscape", img: "img/oil-painting1.jpg" },
+    { id: "landscape-2", title: "Mountain Serenity", category: "landscape", img: "img/oil-painting2.jpg" },
+    { id: "landscape-3", title: "Autumn Pathway", category: "landscape", img: "img/oil-painting3.jpg" },
+    { id: "landscape-4", title: "Golden Fields", category: "landscape", img: "img/oil-painting4.jpg" },
+    { id: "landscape-5", title: "Misty Morning", category: "landscape", img: "img/oil-painting5.jpg" },
+    { id: "landscape-6", title: "Stormy Horizon", category: "landscape", img: "img/oil-painting6.jpg" }
   ],
-  necklaces: [
-    { id: "necklace-1", title: "Brushstroke Waves", category: "necklace", img: "https://picsum.photos/600/600?random=1201" },
-    { id: "necklace-2", title: "Sunset Canvas", category: "necklace", img: "https://picsum.photos/600/600?random=1202" },
-    { id: "necklace-3", title: "Twilight Threads", category: "necklace", img: "https://picsum.photos/600/600?random=1203" },
-    { id: "necklace-4", title: "Golden Horizon", category: "necklace", img: "https://picsum.photos/600/600?random=1204" },
-    { id: "necklace-5", title: "Ethereal Veil", category: "necklace", img: "https://picsum.photos/600/600?random=1205" },
-    { id: "necklace-6", title: "Aurora Glow", category: "necklace", img: "https://picsum.photos/600/600?random=1206" }
+  still_life: [
+    { id: "still_life-1", title: "Vase of Lilies", category: "still_life", img: "img/oil-painting7.jpg" },
+    { id: "still_life-2", title: "Fruit Basket", category: "still_life", img: "img/oil-painting8.jpg" },
+    { id: "still_life-3", title: "Wine and Grapes", category: "still_life", img: "img/oil-painting9.jpg" },
+    { id: "still_life-4", title: "Antique Clock", category: "still_life", img: "img/oil-painting10.jpg" },
+    // { id: "still_life-5", title: "Silver Teapot", category: "still_life", img: "img/oil-painting11.jpg" },
+    // { id: "still_life-6", title: "Old Books", category: "still_life", img: "img/oil-painting12.jpg" }
   ],
-  bracelets: [
-    { id: "bracelet-1", title: "Ocean Ripple", category: "bracelet", img: "https://picsum.photos/600/600?random=1301" },
-    { id: "bracelet-2", title: "Canvas Drift", category: "bracelet", img: "https://picsum.photos/600/600?random=1302" },
-    { id: "bracelet-3", title: "Starry Line", category: "bracelet", img: "https://picsum.photos/600/600?random=1303" },
-    { id: "bracelet-4", title: "Abstract Flow", category: "bracelet", img: "https://picsum.photos/600/600?random=1304" },
-    { id: "bracelet-5", title: "Golden Swirl", category: "bracelet", img: "https://picsum.photos/600/600?random=1305" },
-    { id: "bracelet-6", title: "Sunrise Path", category: "bracelet", img: "https://picsum.photos/600/600?random=1306" }
-  ],
-  earrings: [
-    { id: "earring-1", title: "Canvas Drop", category: "earring", img: "https://picsum.photos/600/600?random=1401" },
-    { id: "earring-2", title: "Light Streaks", category: "earring", img: "https://picsum.photos/600/600?random=1402" },
-    { id: "earring-3", title: "Golden Brush", category: "earring", img: "https://picsum.photos/600/600?random=1403" },
-    { id: "earring-4", title: "Abstract Echo", category: "earring", img: "https://picsum.photos/600/600?random=1404" },
-    { id: "earring-5", title: "Twilight Spark", category: "earring", img: "https://picsum.photos/600/600?random=1405" },
-    { id: "earring-6", title: "Aurora Glow", category: "earring", img: "https://picsum.photos/600/600?random=1406" }
-  ],
-  watches: [
-    { id: "watch-1", title: "Canvas Horizon", category: "watch", img: "https://picsum.photos/600/600?random=1501" },
-    { id: "watch-2", title: "Abstract Time", category: "watch", img: "https://picsum.photos/600/600?random=1502" },
-    { id: "watch-3", title: "Twilight Pulse", category: "watch", img: "https://picsum.photos/600/600?random=1503" },
-    { id: "watch-4", title: "Brushstroke Rhythm", category: "watch", img: "https://picsum.photos/600/600?random=1504" },
-    { id: "watch-5", title: "Golden Flow", category: "watch", img: "https://picsum.photos/600/600?random=1505" },
-    { id: "watch-6", title: "Solar Tide", category: "watch", img: "https://picsum.photos/600/600?random=1506" }
-  ]
+  // portraits: [
+  //   { id: "portrait-1", title: "Lady in Blue", category: "portrait", img: "img/oil-painting13.jpg" },
+  //   { id: "portrait-2", title: "Man with Hat", category: "portrait", img: "img/oil-painting14.jpg" },
+  //   { id: "portrait-3", title: "Young Girl", category: "portrait", img: "img/oil-painting15.jpg" },
+  //   { id: "portrait-4", title: "Old Fisherman", category: "portrait", img: "img/oil-painting16.jpg" },
+  //   { id: "portrait-5", title: "Noblewoman", category: "portrait", img: "img/oil-painting17.jpg" },
+  //   { id: "portrait-6", title: "Pensive Man", category: "portrait", img: "img/oil-painting18.jpg" }
+  // ],
+  // abstract: [
+  //   { id: "abstract-1", title: "Colorful Chaos", category: "abstract", img: "img/oil-painting19.jpg" },
+  //   { id: "abstract-2", title: "Geometric Forms", category: "abstract", img: "img/oil-painting20.jpg" }
+  // ]
 };
+
 
 // Flatten into one list
 const products = Object.values(categories).flat();
@@ -92,19 +81,6 @@ modal.addEventListener("click", (e) => {
     modal.setAttribute("aria-hidden", "true");
   }
 });
-
-// Search functionality (optional)
-const searchInput = document.getElementById("searchInput");
-if (searchInput) {
-  searchInput.addEventListener("input", () => {
-    const q = searchInput.value.trim().toLowerCase();
-    if (!q) return renderGrid();
-    const filtered = products.filter(
-      (p) => p.title.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)
-    );
-    renderGrid(filtered);
-  });
-}
 
 // Helper
 function capitalize(s) {
