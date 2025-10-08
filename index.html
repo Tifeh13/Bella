@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bella — Creative Art Studio</title>
 
-  <!-- Favicon (Art-related, replace for other pages if needed) -->
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/paint-palette.png" type="image/png">
-
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -15,21 +13,12 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="logo">Bella</span>
-      </a>
+      <a class="brand" href="index.html"><span class="logo">Bella</span></a>
 
-      <!-- Horizontal nav -->
       <nav class="nav">
-        <a class="nav-link active" href="index.html" title="Gallery">
-          <i class="fas fa-images"></i>
-        </a>
-        <a class="nav-link" href="about.html" title="About">
-          <i class="fas fa-user"></i>
-        </a>
-        <a class="nav-link" href="contact.html" title="Contact">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a class="nav-link active" href="index.html" title="Gallery"><i class="fas fa-images"></i></a>
+        <a class="nav-link" href="about.html" title="About"><i class="fas fa-user"></i></a>
+        <a class="nav-link" href="contact.html" title="Contact"><i class="fas fa-envelope"></i></a>
       </nav>
     </div>
   </header>
@@ -45,24 +34,28 @@
           <a class="btn btn-ghost" href="about.html">Learn More About Bella</a>
         </div>
       </div>
-
-      <!-- <div class="hero-media">
-        <div class="hero-card">
-          <img src="https://picsum.photos/720/920?random=11" alt="Featured artwork" loading="lazy">
-        </div>
-      </div> -->
     </div>
   </section>
 
-  <!-- Portfolio / Gallery -->
+  <!-- Gallery -->
   <main id="portfolio" class="portfolio container">
     <header class="section-head">
       <h2>Featured Works</h2>
-      <p class="muted">Click on any artwork for an enlarged view. Use the navigation above to explore different styles, including abstract, portrait, landscape, digital, and traditional painting.</p>
+      <p class="muted">Click on any artwork for an enlarged view. Explore different styles, including abstract, portrait, and landscape painting.</p>
     </header>
-
     <div id="productGrid" class="grid"></div>
   </main>
+
+  <!-- Modal (Full Picture Preview) -->
+  <div id="previewModal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="modalClose" class="modal-close" aria-label="Close preview">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="modalImg" src="" alt="Artwork preview">
+      <div id="modalCaption" class="modal-caption"></div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -71,16 +64,23 @@
         <h4>Bella</h4>
         <p class="muted">Specializing in original artworks, custom commissions, and professional collaborations.</p>
       </div>
+
       <div>
         <h5>Follow</h5>
         <ul class="socials">
           <li>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="http://www.tiktok.com/@bella_canvas_art" target="_blank" rel="noopener">
               <i class="fab fa-tiktok"></i> TikTok
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/Bellasmith981" target="_blank" rel="noopener">
+              <i class="fab fa-x-twitter"></i> X
             </a>
           </li>
         </ul>
       </div>
+
       <div>
         <h5>Contact</h5>
         <a class="muted" href="contact.html">Get in Touch</a>
@@ -91,16 +91,6 @@
     </div>
   </footer>
 
-  <!-- Modal preview -->
-  <div id="previewModal" class="modal" aria-hidden="true">
-    <div class="modal-inner">
-      <button id="modalClose" class="modal-close" aria-label="Close preview">✕</button>
-      <img id="modalImg" alt="">
-      <div id="modalCaption" class="modal-caption"></div>
-    </div>
-  </div>
-
- 
   <script src="script.js"></script>
 </body>
 </html>
