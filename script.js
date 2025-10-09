@@ -10,7 +10,9 @@ const categories = {
     { id: "portrait-7", title: "Project 7", category: "portrait", img: "img/oil-painting7.jpg" },
     { id: "portrait-8", title: "Project 8", category: "portrait", img: "img/oil-painting8.jpg" },
     { id: "portrait-9", title: "Project 9", category: "portrait", img: "img/oil-painting9.jpg" },
-    { id: "portrait-10", title: "Project 10", category: "portrait", img: "img/oil-painting10.jpg" }
+    { id: "portrait-10", title: "Project 10", category: "portrait", img: "img/oil-painting10.jpg" },
+    { id: "portrait-11", title: "Project 11", category: "portrait", img: "img/project-11.jpg" },
+    { id: "portrait-12", title: "Project 12", category: "portrait", img: "img/project-12.jpg" }
   ]
 };
 
