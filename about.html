@@ -6,20 +6,23 @@
   <title>About — Bella Canvas Art</title>
 
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/ff8c42/paint-palette.png" type="image/png">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><span class="logo"><img src="./img/bella.jpg" alt="" style="width: 70px; border-radius: 10px;" ></span></a>
+      <a class="brand" href="index.html" aria-label="Bella — home"><img src="./img/bella.jpg" alt="Bella"></a>
 
-      <nav class="nav">
-        <a class="nav-link" href="index.html" title="Gallery"><i class="fas fa-images"></i></a>
-        <a class="nav-link active" href="about.html" title="About"><i class="fas fa-user"></i></a>
-        <a class="nav-link" href="contact.html" title="Contact"><i class="fas fa-envelope"></i></a>
+      <nav class="nav" aria-label="Main">
+        <a class="nav-link" href="index.html" title="Gallery" aria-label="Gallery"><i class="fas fa-images"></i></a>
+        <a class="nav-link active" href="about.html" title="About" aria-label="About"><i class="fas fa-user"></i></a>
+        <a class="nav-link" href="contact.html" title="Contact" aria-label="Contact"><i class="fas fa-envelope"></i></a>
       </nav>
     </div>
   </header>
@@ -33,7 +36,7 @@
 
     <div class="about-inner">
       <div class="bio-image">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&w=600&h=600" alt="Bella portrait" loading="lazy" style="width:48%; margin-right:4%;">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&w=600&h=600" alt="Bella portrait" loading="lazy">
       </div>
 
       <div class="bio-text">
@@ -49,10 +52,10 @@
           <li>Exhibited works that highlight mastery of light and layered brushwork.</li>
         </ul>
 
-        <h3>Mediums & Techniques</h3>
+        <h3>Mediums &amp; Techniques</h3>
         <p>I focus on portraiture and expressive compositions, using underpainting, glazing, and impasto for rich texture and depth.</p>
 
-        <h3>Philosophy & Impact</h3>
+        <h3>Philosophy &amp; Impact</h3>
         <p>My goal is to preserve tradition through timeless art that connects emotion, color, and storytelling.</p>
 
         <p><em>For commissions or collaborations, please visit the Contact page.</em></p>
@@ -62,30 +65,49 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <h4>Bella</h4>
-        <p class="muted">Oil painting specialist — timeless works on canvas.</p>
+    <div class="container">
+      <div class="footer-cta">
+        <h3>Have a painting in mind?</h3>
+        <a class="btn" href="contact.html">Get in Touch</a>
       </div>
-      <div>
-        <h5>Follow</h5>
-        <ul class="socials">
-          <li>
-            <a href="http://www.tiktok.com/@bella_canvas_art" target="_blank" rel="noopener">
-              <i class="fab fa-tiktok"></i> TikTok
-            </a>
-          </li>
-          <li>
-            <a href="https://x.com/Bellasmith981" target="_blank" rel="noopener">
-              <i class="fab fa-x-twitter"></i> X
-            </a>
-          </li>
-        </ul>
+
+      <div class="footer-inner">
+        <div>
+          <h4>Bella</h4>
+          <p>Specializing in original artworks, custom commissions, and professional collaborations.</p>
+        </div>
+
+        <div>
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Follow</h5>
+          <ul class="socials">
+            <li>
+              <a href="https://www.tiktok.com/@bella_canvas_art" target="_blank" rel="noopener">
+                <i class="fab fa-tiktok"></i> TikTok
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/Bellasmith981" target="_blank" rel="noopener">
+                <i class="fab fa-x-twitter"></i> X
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2020 Bella — All rights reserved.</span>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2020 Bella — All rights reserved.
-    </div>
+    <div class="footer-mark" aria-hidden="true">Bella</div>
   </footer>
 
 </body>

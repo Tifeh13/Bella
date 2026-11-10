@@ -26,13 +26,15 @@ const modalImg = document.getElementById("modalImg");
 const modalCaption = document.getElementById("modalCaption");
 const modalClose = document.getElementById("modalClose");
 
-// Render grid
+let lastFocused = null;
+
+// Render grid (cards are keyboard-focusable)
 function renderGrid(list = products) {
   if (!productGrid) return;
   productGrid.innerHTML = list
     .map(
       (p) => `
-      <article class="card" data-id="${p.id}" data-category="${p.category}">
+      <article class="card" data-id="${p.id}" data-category="${p.category}" tabindex="0" role="button" aria-label="View ${p.title}">
         <img src="${p.img}" alt="${p.title}" loading="lazy">
         <h3>${p.title}</h3>
       </article>
@@ -42,34 +44,45 @@ function renderGrid(list = products) {
 }
 renderGrid();
 
-// Modal open
-productGrid.addEventListener("click", (e) => {
-  const card = e.target.closest(".card");
-  if (!card) return;
-  const id = card.dataset.id;
-  const p = products.find((x) => x.id === id);
+// Modal open / close
+function openModal(card) {
+  const p = products.find((x) => x.id === card.dataset.id);
   if (!p) return;
+  lastFocused = card;
   modalImg.src = p.img;
-  modalCaption.textContent = `${p.title}`;
+  modalImg.alt = p.title;
+  modalCaption.textContent = p.title;
   modal.classList.add("show");
   modal.setAttribute("aria-hidden", "false");
-});
+  document.body.style.overflow = "hidden";
+  modalClose.focus();
+}
 
-// Modal close
-modalClose.addEventListener("click", () => {
+function closeModal() {
   modal.classList.remove("show");
   modal.setAttribute("aria-hidden", "true");
-});
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-  }
-});
-
-
-// Helper
-function capitalize(s) {
-  if (!s) return "";
-  return s.charAt(0).toUpperCase() + s.slice(1);
+  document.body.style.overflow = "";
+  if (lastFocused) lastFocused.focus();
 }
+
+if (productGrid) {
+  productGrid.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    if (card) openModal(card);
+  });
+  productGrid.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const card = e.target.closest(".card");
+    if (!card) return;
+    e.preventDefault();
+    openModal(card);
+  });
+}
+
+modalClose.addEventListener("click", closeModal);
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) closeModal();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("show")) closeModal();
+});
